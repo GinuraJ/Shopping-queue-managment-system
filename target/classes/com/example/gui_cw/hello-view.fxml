@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="540.0" prefWidth="920.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui_cw.GuiController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="880.0">
+         <children>
+            <ImageView fitHeight="538.0" fitWidth="1109.0" layoutX="-1.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@food.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="548.0" layoutY="30.0" text="FOODIES FAVE FOOD CENTRE" textFill="#b2b2b2">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="130.0" layoutX="441.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cashire.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="130.0" layoutX="599.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cashire.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="130.0" layoutX="755.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cashire.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="950.0" layoutY="198.0" mnemonicParsing="false" onAction="#openIncomeWindow" prefHeight="58.0" prefWidth="150.0" style="-fx-background-color: #26c630;" text="Queue Income">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="950.0" layoutY="267.0" mnemonicParsing="false" onAction="#openCustomerWindow" prefHeight="58.0" prefWidth="150.0" style="-fx-background-color: #F1C40F;" text="Customer Details">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <AnchorPane fx:id="queueIncomePane" layoutX="13.0" layoutY="17.0" prefHeight="506.0" prefWidth="408.0" visible="false">
+               <children>
+                  <ImageView fitHeight="495.0" fitWidth="392.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@QIncomeContainer.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="343.0" layoutY="12.0" mnemonicParsing="false" onAction="#close" prefHeight="50.0" prefWidth="54.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="burgersSoldq1" layoutX="273.0" layoutY="144.0" prefHeight="20.0" prefWidth="68.0" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="incomeq1" layoutX="273.0" layoutY="178.0" prefHeight="20.0" prefWidth="68.0" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="burgersSoldq2" layoutX="266.0" layoutY="275.0" prefHeight="20.0" prefWidth="68.0" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="incomeq2" layoutX="266.0" layoutY="309.0" prefHeight="20.0" prefWidth="68.0" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="burgersSoldq3" layoutX="266.0" layoutY="394.0" prefHeight="20.0" prefWidth="68.0" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="incomeq3" layoutX="266.0" layoutY="428.0" prefHeight="20.0" prefWidth="68.0" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="customerDetails" layoutX="13.0" layoutY="17.0" prefHeight="506.0" prefWidth="408.0" visible="false">
+               <children>
+                  <ImageView fitHeight="495.0" fitWidth="392.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@costomerDetalsContainer.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="343.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="50.0" prefWidth="54.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="name1" layoutX="115.0" layoutY="110.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name2" layoutX="115.0" layoutY="142.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name3" layoutX="115.0" layoutY="188.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name4" layoutX="115.0" layoutY="221.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name5" layoutX="115.0" layoutY="253.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name6" layoutX="115.0" layoutY="302.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name7" layoutX="115.0" layoutY="335.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name8" layoutX="115.0" layoutY="367.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name9" layoutX="115.0" layoutY="399.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name10" layoutX="115.0" layoutY="431.0" text="Label">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="stockDetails" layoutX="12.0" layoutY="17.0" prefHeight="506.0" prefWidth="408.0" visible="false">
+               <children>
+                  <ImageView fitHeight="495.0" fitWidth="392.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@stockDetailsContainer.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="343.0" layoutY="12.0" mnemonicParsing="false" onAction="#close" prefHeight="50.0" prefWidth="54.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="issuedQ1" layoutX="54.0" layoutY="140.0" text="00">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="issuedQ2" layoutX="54.0" layoutY="224.0" text="00">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="issuedQ3" layoutX="54.0" layoutY="303.0" text="00">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="burgerStock" layoutX="54.0" layoutY="375.0" text="00" textFill="#1a5276">
+                     <font>
+                        <Font size="57.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="88.0" fitWidth="83.0" layoutX="117.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@burger.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="192.0" layoutY="407.0" text="in stock">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button layoutX="950.0" layoutY="337.0" mnemonicParsing="false" onAction="#openStockWindow" prefHeight="58.0" prefWidth="150.0" style="-fx-background-color: #3498DB;" text="Stock Details">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="950.0" layoutY="130.0" mnemonicParsing="false" onAction="#openSearchWindow" prefHeight="58.0" prefWidth="150.0" style="-fx-background-color: #B2BABB;" text="Search Customer">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeButton" layoutX="1025.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleButtonClick" style="-fx-background-color: #B03A2E;" text="Click here" textFill="WHITE" />
+            <Label layoutX="811.0" layoutY="501.0" text="Close the window and back to console" textFill="#8d8d8d" />
+            <AnchorPane fx:id="waitingDetails" layoutX="13.0" layoutY="17.0" prefHeight="506.0" prefWidth="408.0" visible="false">
+               <children>
+                  <ImageView fitHeight="489.0" fitWidth="392.0" layoutX="8.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@waitingQueueContainer.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="343.0" layoutY="12.0" mnemonicParsing="false" onAction="#close" prefHeight="50.0" prefWidth="54.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="waiting1" layoutX="83.0" layoutY="114.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="waiting2" layoutX="83.0" layoutY="157.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="waiting3" layoutX="83.0" layoutY="198.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="waiting4" layoutX="83.0" layoutY="242.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="waiting5" layoutX="83.0" layoutY="283.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="waiting6" layoutX="83.0" layoutY="326.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="waiting7" layoutX="83.0" layoutY="367.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="waiting8" layoutX="83.0" layoutY="410.0" prefHeight="23.0" prefWidth="233.0" text="Ginura Premawardana" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button layoutX="950.0" layoutY="405.0" mnemonicParsing="false" onAction="#openWaitingWindow" prefHeight="58.0" prefWidth="150.0" style="-fx-background-color: #C39BD3;" text="Waiting Queue">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="589.0" layoutY="217.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="589.0" layoutY="264.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="589.0" layoutY="311.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="744.0" layoutY="359.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="743.0" layoutY="218.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="743.0" layoutY="265.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="743.0" layoutY="312.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="744.0" layoutY="406.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="430.0" layoutY="216.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="152.0" layoutX="430.0" layoutY="263.0" pickOnBounds="true">
+               <image>
+                  <Image url="@nameBack.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="q1p1" layoutX="442.0" layoutY="234.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q1p2" layoutX="442.0" layoutY="281.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q2p1" layoutX="599.0" layoutY="234.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q2p2" layoutX="599.0" layoutY="281.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q3p1" layoutX="754.0" layoutY="235.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q3p2" layoutX="754.0" layoutY="282.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q3p3" layoutX="754.0" layoutY="330.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q3p4" layoutX="754.0" layoutY="377.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q2p3" layoutX="599.0" layoutY="328.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="q3p5" layoutX="754.0" layoutY="425.0" prefHeight="31.0" prefWidth="124.0" text="Label">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="searchDetails" layoutX="505.0" layoutY="118.0" prefHeight="230.0" prefWidth="438.0" visible="false">
+               <children>
+                  <ImageView fitHeight="262.0" fitWidth="393.0" layoutX="38.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@searchCustomerBackground.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="385.0" layoutY="9.0" mnemonicParsing="false" onAction="#close" prefHeight="38.0" prefWidth="40.0" style="-fx-background-color: red;" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="firstName" layoutX="49.0" layoutY="113.0" prefHeight="26.0" prefWidth="223.0" />
+                  <Button layoutX="333.0" layoutY="179.0" mnemonicParsing="false" onAction="#searchCustomer" prefHeight="27.0" prefWidth="86.0" text="Search">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="116.0" fitWidth="140.0" layoutX="304.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@searchIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="69.0" layoutX="50.0" layoutY="145.0" stroke="WHITE" strokeType="INSIDE" width="242.0" />
+                  <Pane fx:id="searchResult" layoutX="49.0" layoutY="84.0" prefHeight="133.0" prefWidth="376.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <Label layoutX="182.0" layoutY="29.0" text="Last name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="searchCustomerFname" layoutX="266.0" layoutY="2.0" text="-" textFill="#2044a8">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="searchCustomerQueue" layoutX="248.0" layoutY="58.0" text="-" textFill="#2044a8">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <ImageView fx:id="happy" fitHeight="107.0" fitWidth="96.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@happyEmoji.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="foundoops" layoutX="14.0" layoutY="90.0" text="Found" textFill="#d3a611">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="178.0" layoutY="55.0" text="Queue" textFill="#575757">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="oops" fitHeight="99.0" fitWidth="100.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sadEmoji.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="179.0" layoutY="81.0" text="Position">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="searchCustomerPlace" layoutX="248.0" layoutY="83.0" text="-" textFill="#2044a8">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="searchCustomerBurgers" layoutX="249.0" layoutY="110.0" text="-" textFill="#2044a8">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="178.0" layoutY="107.0" text="Burgers">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="179.0" layoutY="3.0" text="First name" textFill="#575757">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="searchCustomerLname" layoutX="267.0" layoutY="30.0" text="-" textFill="#2044a8">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</VBox>
